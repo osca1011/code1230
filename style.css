@@ -1,5 +1,5 @@
 body {
-	background: #7FDBFF;
+	background: red;
 	color: #001f3f;
 	text-align:center;
 	font-family:Helvetica;
@@ -14,6 +14,7 @@ h1 {
 	width: 40%;
 	height:10%;
 	margin:auto;
+	border-style: dotted;
 }
 
 p {
