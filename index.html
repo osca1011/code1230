@@ -1,35 +1,442 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
 <title>Urban Transformation</title>
-<link rel="stylesheet" type="text/css" href="style.css"/>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!---- start-smoth-scrolling---->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+			    <script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$(".scroll").click(function(event){		
+							event.preventDefault();
+							$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+						});
+					});
+				</script>
+<!---- start-smoth-scrolling---->
+ <!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+</script>
+<!----webfonts---->
+<link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900' rel='stylesheet' type='text/css'>
+<!----//webfonts---->
+	<!----- start-Share-instantly-slider---->
+					 <!-- Prettify -->
+						<link href="css/owl.carousel.css" rel="stylesheet">
+					    <script src="js/owl.carousel.js"></script>
+					    <script>
+						    $(document).ready(function() {
+						      $("#owl-demo , #owl-demo1").owlCarousel({
+						        items : 1,
+						        lazyLoad : true,
+						        autoPlay : true,
+						      });
+						    });
+					    </script>
+					    <script>
+						    $(document).ready(function() {
+						      $("#owl-demo3").owlCarousel({
+						        items : 4,
+						        lazyLoad : true,
+						        autoPlay : true,
+						        navigation: false,
+						        pagination: false,
+						      });
+						    });
+					    </script>
+					<!----- //End-Share-instantly-slider---->
+             
+				<!----start-top-nav-script---->
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
 
+
+		<!----//End-top-nav-script---->
+<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+		    <script type="text/javascript">
+			    $(document).ready(function () {
+			        $('#horizontalTab').easyResponsiveTabs({
+			            type: 'default', //Types: default, vertical, accordion           
+			            width: 'auto', //auto or any width like 600px
+			            fit: true   // 100% fit in a container
+			        });
+			    });
+			   </script>
+
+
+		<script type="text/javascript">
+
+			function showDivSydney(){
+				$("#sydney").css("display","block");
+				$("#tab_sydney").css("background","#CFCFCF");
+				$("#tab_tokyo").css("background","none");
+				$("#tokyo").css("display","none");
+				showDivSydney_Impact();	
+			}
+
+			function showDivSydney_Impact(){
+				$("#sydney_impact").css("display","block");
+				$("#sydney_back").css("display","none");
+				$("#tab_sydney_impact").css("background","#CFCFCF");
+				$("#tab_sydney_back").css("background","none");
+
+			}
+
+			function showDivSydney_Back(){
+				$("#sydney_impact").css("display","none");
+				$("#sydney_back").css("display","block");
+				$("#tab_sydney_back").css("background","#CFCFCF");
+				$("#tab_sydney_impact").css("background","none");
+
+			}
+
+			function showDivTokyo(){
+				$("#sydney").css("display","none");
+				$("#tokyo").css("display","block");
+				$("#tab_sydney").css("background","none");
+				$("#tab_tokyo").css("background","#CFCFCF");
+				showDivTokyo_Impact();
+			}
+
+			function showDivTokyo_Impact(){
+				$("#tokyo_impact").css("display","block");
+				$("#tab_tokyo_impact").css("background","#CFCFCF");
+				$("#tab_tokyo_back").css("background","none");
+				$("#tokyo_back").css("display","none");
+			}
+
+			function showDivTokyo_Back(){
+				$("#tokyo_back").css("display","block");
+				$("#tab_tokyo_back").css("background","#CFCFCF");
+				$("#tab_tokyo_impact").css("background","none");
+				$("#tokyo_impact").css("display","none");
+			}
+		</script>			   
 </head>
-
 <body>
+	<div style="position:relative">
+		<div class="header">
+			<div class="container">
+				<div class="logo">
+					<h3 class="m_2"><b>Urban Transformation</b></h3>
+				</div>
+				<nav class="top-nav">
+					<ul class="top-nav">
+						<li class="active"><a href="#home" class="scroll">Home <span> </span></a></li>
+						<li class="page-scroll"><a onclick="showDivSydney();href='#introduction'" class="scroll">Sydney<span> </span></a></li>
+						<li class="page-scroll"><a onclick="showDivTokyo();href='#introduction'" class="scroll">Tokyo<span> </span></a></li>
+						<li class="page-scroll"><a href="#summary" class="scroll">Summary<span> </span></a></li>
+						<li class="page-scroll"><a href="#reference" class="scroll">References<span> </span></a></li>						
+					</ul>
+					<a href="#" id="pull"><img src="images/nav-icon.png" title="menu" /></a>
+			</nav>			
+			</div>
+		</div>
+	
+  
+	<!-- part1: slider   -->
+		<div class="main" id="home" style="padding-top: 30px">
+				<div class="slider_container">
+					<div class="wmuSlider example1">
+							<div class="wmuSliderWrapper">
+								<article style="position: absolute; width: 100%; opacity: 0;"> 
+									<div class="sliderarticle1">
+									</div>
+								</article>
+								<article style="position: relative; width: 100%; opacity: 1;"> 
+									<div class="sliderarticle2">
+									</div>
+							</div>
+							<ul class="wmuSliderPagination">
+								<li><a href="#" class="">0</a></li>
+								<li><a href="#" class="">1</a></li>
+							</ul>
+							</div>
+							<script src="js/jquery.wmuSlider.js"></script> 
+									<script>
+											$('.example1').wmuSlider();         
+										</script> 	           	      
+					</div>
+		</div>
+	<!-- part1: Definition   -->					
+		<div class="row feature">
+			<div class="col-md-8 feature_top">
+				<h3>Code Assigment1</h3>
+				<p> Urban transformation can refer to planning theory changes in each period and the approach to urban. Especially the improvement and replacement of buildings in a city, each of urban transformation plan has advantages and drawbacks.</p>
+			</div>
+			<div class="col-md-4 feature_img">
+				<img src="http://img3.myhsw.cn/2018-06-19/df7k1389.jpg" class="img-responsive" alt=""/>
+			</div>
+		</div>
 
- <div class="topnav" id="myTopnav">
- <a href="index.html">Home</a>
- <a href="page1.html">page1</a>
- <a href="page2.html">page2</a>
- <a href="page3.html">page3</a>
- <a href="page4.html">page4</a>
- <a href="page5.html">page5</a>
- </div>
+		
+		<!-- part2: city overview  -->
+		<div class="main" id="introduction">
+			<div class="content-top">		
+				<div class="container" >		
+					<div  style="display: block; width: 100%; margin: 0px;">
+						<ul>
+							<li class="resp-tab-item" id="tab_sydney" onclick=showDivSydney()>Sydney</li>
+							<li class="resp-tab-item" id="tab_tokyo" onclick=showDivTokyo()>Tokyo</li>
+						</ul>	
+					</div>
+					<div class="border" ></div>
 
+					<div class="col-md-8 feature_top" id="sydney">
+							<div class="container">
+									<div style="text-align: left">
+										<h3 class="m_7"><b>Green Square - Sydney</b></h3>
+									</div>
 
-<h1>this my new title!</h1>
+									<div>
+										<iframe width="100%" height="500" src="https://www.youtube.com/embed/XvaIN9cH4z4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+									</div>	
+									
+									<div class="row">
+											<h3 class="m_7">Concept</h3>			
+											<p class="m_6">Green Square was the oldest industrial heartland in Sydney, which is transforming into a vibrant, sustainable and connected community.
+						This area closes to the airport and city Centre, connected by rail, bus and cycle way.
+											</p>
+									</div>
 
-<p>paragraph text here<br><br>
-this is a new line
-</p>
+									<div class="row">
+										<div class="left_div"> 
+												<img src="6.-LFA-GSTC-Final-Illustrative-Masterplan.jpg" alt="" width="100%" height="400px">
+										</div>
 
-<img src="dwadwafdwafagfq.jpg" alt="image missing!" style="width:25%" />
+										<div class="right_div">
+												<img src="sydney3.jpg" alt="" width="100%" height="400px" >
+										</div>
+									</div>
 
-<footer> 
-<a href="https://github.com/madeleinejohanson"> your footer text here</a>
-</footer>
+									<div class="row">			
+													<p class="m_6">	
+							Green Square Planning began in 1997, start construction in 2012. This Planning will build around 30,500 new residential dwellings. Provided facilities a growing community needs, such as a new shopping Centre new aquatic Centre, a child care Centre, a Plaza included library and Diet Center. The space of Plaza will have capacity for up to 4,000 revelers in New Year's Eve(Cheng,2016).
+													</p>
+									</div>
+										
+									<div class="row">
+											<div class="left_div">										
+												<img src="Construction-Green-Square-inline.jpg" alt="" width="100%" height="400px">	
+											</div>
 
+											<div class="right_div">
+													<img src="149bbb00b06168ceae4580222d540676.jpg" alt=""/width="100%" height="400px" >
+											</div>
+
+											
+									</div>
+		
+
+									<div class="row">
+												<p class="m_6">Green Square Plan provide housing and workplaces for a growing population while ensuring development is sustainable, and respectful of existing neighborhoods. Green Square is one of the fastest growing areas in Sydney and one of our most diverse.
+		"The history of the area and how we have kept some of it. This is what makes Waterloo and Green Square unique." -  City of Sydney Resident Consultations.In addition, The Government has already invested more than $40m to secure land, ready for light rail. This light rail will connect with Sydney Train, increase the efficiency of the trip from Green Square to central Sydney and Airport.  The Government also planned cycle-way to avoid trafficking jams.
+		</p>
+		<br>
+									</div>
+										
+									<div class="row"  >
+											<div class="left_div">
+													<h3 class="m_7">Pros</h3>																		
+													<img src="GREENSQUARE.jpg" alt=""/width="100%">
+												</div>
+												<div class="right_div">
+													<h3 class="m_7">Cons</h3>					
+													<p class="m_6">With the development of Green Square, there are some issues cannot be resolved.
+															According to The Sydney Morning Herald, about 120 filled buses run through Green Square in peak hours and takes up to 15 minutes to travel 2 km from Zetland to Bourke St.
+															On the other hand, because residential densities increase, the price of Parking space also increased, and a significant number of citizens cannot find Parking Space in this Space.</p>
+													<img src="11111.jpg" alt=""/width="100%">									
+												</div>
+									</div>
+                                    <div>
+										<p></p>
+										<div style="float:right" >
+												<a  onclick="showDivTokyo();href='#introduction'">Learn Tokyo
+												     <img src="images/right_arrow.png" alt="">
+											    </a>
+										</div>
+								    </div>
+							</div>	
+					</div>
+					
+					<div class="col-md-8 feature_top" style="display: none;" id="tokyo">
+							<div class="container">
+								<div style="text-align: left">
+									 <h3 class="m_7">Station - Tokyo</h3>
+								</div>
+						
+								<div>
+											<iframe width="100%" height="600" src="https://www.youtube.com/embed/SMrH8FgqpFY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+								</div>	
+
+								<div class="row">
+										<h3 class="m_7">Concept</h3>			
+										<p class="m_6">he Tokyo Station is the heart of Japan's capital city,a perfect illustration of applying modern technology and preserving cultural heritage. The Urban Transform of Tokyo Station accommodated new spaces of consumption and leisure,accommodate new urban functions and to enhance the passengers' travel experience(Zacharias, 2011).
+										</p>
+								</div>
+
+												
+							    <div class="row">
+										<div class="left_div"> 
+												<img src="tokyo-st1.jpg" alt="" width="100%" height="400px">
+										</div>
+	
+										<div class="right_div">
+												<img src="ameyayokocho-1140x638.jpg" alt="" width="100%" height="400px" >
+										</div>
+								</div>
+									  	 
+								<div class="row">
+										<div class="left_div"> 
+												<p class="m_6">Since 2000, railway station redevelopment for urban transformation programs underway in major Japanese cities.
+														JR East and landowners completed the GranTokyo twin towers, the GranSta in-station shopping space and the SapiaTower in 2007 and 2013 respectively. The idea is to offer customers memorable high-quality services. Eight up and down escalators were installed in four locations and the concourse was renovated as part of the shop development. The aim was to improve the first-floor underground concourse, enhance flow lines for pedestrians, and relieve congestion(Kaise,2010).
+												</p>
+												<p>14 floors chain department store</p>
+												<p>205 meter tall office</p>
+												<p>50 stores underground shopping center</p>
+										</div>
+	
+										<div class="right_div">
+												<img src="1111111.jpg" alt="" width="100%" height="400px" >
+										</div>
+								</div>
+													
+								<div class="row">
+										<div class="left_div">
+												<img src="20180810000111.png" alt="" width="100%" height="400px" >
+										</div>
+
+										<div class="right_div"> 
+												<p class="m_6">In 2014, JR East announced two additional plans to redevelop the underground facilities and the station plaza. The cooperative corporation proposed redevelopment projects in the districts of Tokiwabashi and Yaesu, invested 5 billion USD. These projects contain six buildings in total to be completed in the 2020s. The project has created an attraction that combines the modern elements with the traditional esthetics and improved the city image. The project brings positive benefits to the political and business entities near the station (Chang, 2015).													
+												</p>
+										</div>	
+								</div>
+
+								<div class="row"  >
+										<div class="left_div">
+												<h3 class="m_7">Pros</h3>																		
+												<img src="to2.jpg" alt=""/width="100%">
+											</div>
+											<div class="right_div">
+												<h3 class="m_7">Cons</h3>					
+												<p class="m_6">In addition, there are many measures to alleviate overcrowding for decades, including more train runs and track sharing. However, with the population increase and development of Japan, the issue is not solved. The transit ticket also was increased with the urban transformation.
+														The security check issue on Tokyo Station is another important drawback.There are up to 18 ticket gates without security check system at Tokyo Station. The Government should invested more than $2 billion USD on security check system. What is more, Due to passenger traffic of Tokyo Station(he passenger flow volume is 1.2 million), passengers will be delayed.														
+			                                    </p>
+			                                    <img src="to312321.jpg" alt=""/width="100%">									
+											</div>
+								</div>				
+								
+								<div>
+										<p></p>
+										<div style="float:right" >
+												<a  onclick="showDivSydney();href='#introduction'">Learn Sydney
+												     <img src="images/right_arrow.png" alt="">
+											    </a>
+										</div>
+								</div>
+									
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- part3: summary  -->
+		<div class="border"></div>
+		<div class="main" id="summary">
+
+				<div class="container">
+					
+					<div class="row feature">
+						<div class="col-md-8 feature_top">
+							<h3>Summary</h3>
+							<p>In conclusion, Green Square Station in Sydney, Australia and Tokyo Station in Japan are two different Urban Transform Planning, it may be the reason of different cultural background. In this way, the Keyword of Green Square can be concluded neighbour-hoods community and new transportation system. The Tokyo Station tend to like a commercial district and underground centre. It cannot be denied that there both are successful Urban Transformation, although it still existing shortcoming.</p>
+						</div>
+						<div class="col-md-4 feature_img">
+							<img src="http://img3.myhsw.cn/2018-06-19/df7k1389.jpg" class="img-responsive" alt=""/>
+						</div>
+					</div>
+				</div>
+		</div>
+
+		<!-- part4: reference  -->
+		<div class="border" id="reference"></div>
+		<div class="main">
+				<div class="container">
+					
+					<div class="row feature">
+						<div class="col-md-8 feature_top">
+							<h3>References</h3>
+							<p>Linda Cheng. (2016). ArchitectureAU: New vision for Green Square Plaza. Retrieved April 2016 from https://architectureau.com/articles/new-visions-for-green-square-plaza/ <br>City of Sydney.(2018). Green Square: A rich past and an exciting future. Retrieved 	from http://www.cityofsydney.nsw.gov.au/vision/green-square <br>James Robertson.(2014).The Sydney Morning Herald: Green square traffic problems. Retrieved July 2014 from
+	https://www.smh.com.au/national/nsw/green-square-traffic-problems-20140717-zu832.html<br>John Zacharias. (2011).URBAN DESIGN International: Issue4,pp 242-251. Retrieved December 2011 from:https://link.springer.com/article/10.1057/udi.2011.15<br>Kaise. (2010).Upgrading Yaesu-Side of Tokyo Station (Tokyo Station Area Development Project). Retrieved December 2010 from:http://www.ejrcf.or.jp/jrtr/jrtr56/pdf/6-13web.pdf<br>
+	Xiao Yun Chang.(2015).Tokyo Station City Development Plan.Retrieved 2015 from: http://web.mit.edu/xyzjayne/www/writing/11-301/assignment2.pdf
+	</p>
+						</div>
+						<div class="col-md-4 feature_img">
+							<img src="http://img3.myhsw.cn/2018-06-19/df7k1389.jpg" class="img-responsive" alt=""/>
+						</div>
+					</div>
+				</div>
+		</div>
+		
+		<!-- part5: footer  -->
+		<div class="main">
+			<div class="container">
+				<div class="footer_bottom">
+					<div class="social">	
+					<ul>	
+						<li class="s1"><a href="#"><span> </span></a></li>
+						<li class="s2"><a href="#"><span> </span></a></li>
+						<li class="s3"><a href="#"><span> </span></a></li>
+						<li class="s4"><a href="#"><span> </span></a></li>
+						<li class="s5"><a href="#"><span> </span></a></li>
+						<li class="s6"><a href="#"><span> </span></a></li>
+						<li class="s7"><a href="#"><span> </span></a></li>
+						<li class="s8"><a href="#"><span> </span></a></li>
+						<li class="s9"><a href="#"><span> </span></a></li>
+					</ul>
+					</div>
+				<div class="clearfix"> </div>
+				</div>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						/*
+						var defaults = {
+							containerID: 'toTop', // fading element id
+							containerHoverID: 'toTopHover', // fading element hover id
+							scrollSpeed: 1200,
+							easingType: 'linear' 
+						};
+						*/
+						
+						$().UItoTop({ easingType: 'easeOutQuart' });
+						
+					});
+				</script>
+				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;">top </span></a>
+			</div>
+		</div>
+    </div>
 </body>
-
 </html>
