@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <title>MY FIRST WESITE</title>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+  
+  <boby>
+   
+  <div class="topnav" id="myTopnav">
+ <a href="index.html">image1</a>
+ <a href="page1.html">image2</a>
+ <a href="page2.html">image3</a>
+ <a href="page3.html">image4</a>
+ <a href="page4.html">image5</a>
+
+ </div>
+   
+    <h1>Urban Modelling Week 1</h1>
+    
+    <p>image 4</p>
+    <image src="http://images.adsttc.com.qtlcn.com/media/images/5956/8b9e/b22e/3853/6800/0221/newsletter/LEVS_ForumCity01.jpg?1498844053"alt="image missing"/>
+    <image src="758208075308098890.jpg"alt="image missing"/>
+    <image src="285772771703067221.jpg"alt="image missing"/>
+    <image src="108227929850650718.jpg"alt="image missing"/>
+    <footer>
+      <a href="https://github.com/SijiaPei/code1230">This is my footer</a>
+   </footer>
+  </boby>
+</html>
