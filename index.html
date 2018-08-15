@@ -1,0 +1,459 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Urban Transformation</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!---- start-smoth-scrolling---->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+			    <script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$(".scroll").click(function(event){		
+							event.preventDefault();
+							$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+						});
+					});
+				</script>
+<!---- start-smoth-scrolling---->
+ <!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+</script>
+<!----webfonts---->
+<link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900' rel='stylesheet' type='text/css'>
+<!----//webfonts---->
+	<!----- start-Share-instantly-slider---->
+					 <!-- Prettify -->
+						<link href="css/owl.carousel.css" rel="stylesheet">
+					    <script src="js/owl.carousel.js"></script>
+					    <script>
+						    $(document).ready(function() {
+						      $("#owl-demo , #owl-demo1").owlCarousel({
+						        items : 1,
+						        lazyLoad : true,
+						        autoPlay : true,
+						      });
+						    });
+					    </script>
+					    <script>
+						    $(document).ready(function() {
+						      $("#owl-demo3").owlCarousel({
+						        items : 4,
+						        lazyLoad : true,
+						        autoPlay : true,
+						        navigation: false,
+						        pagination: false,
+						      });
+						    });
+					    </script>
+					<!----- //End-Share-instantly-slider---->
+             
+				<!----start-top-nav-script---->
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
+
+
+		<!----//End-top-nav-script---->
+<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+		    <script type="text/javascript">
+			    $(document).ready(function () {
+			        $('#horizontalTab').easyResponsiveTabs({
+			            type: 'default', //Types: default, vertical, accordion           
+			            width: 'auto', //auto or any width like 600px
+			            fit: true   // 100% fit in a container
+			        });
+			    });
+			   </script>
+
+
+		<script type="text/javascript">
+
+			function showDivSydney(){
+				$("#sydney").css("display","block");
+				$("#tab_sydney").css("background","#CFCFCF");
+				$("#tab_liuzhou").css("background","none");
+				$("#liuzhou").css("display","none");
+				showDivSydney_Impact();	
+			}
+
+			function showDivSydney_Impact(){
+				$("#sydney_impact").css("display","block");
+				$("#sydney_back").css("display","none");
+				$("#tab_sydney_impact").css("background","#CFCFCF");
+				$("#tab_sydney_back").css("background","none");
+
+			}
+
+			function showDivSydney_Back(){
+				$("#sydney_impact").css("display","none");
+				$("#sydney_back").css("display","block");
+				$("#tab_sydney_back").css("background","#CFCFCF");
+				$("#tab_sydney_impact").css("background","none");
+
+			}
+
+			function showDivLiuzhou(){
+				$("#sydney").css("display","none");
+				$("#liuzhou").css("display","block");
+				$("#tab_sydney").css("background","none");
+				$("#tab_liuzhou").css("background","#CFCFCF");
+				showDivLiuzhou_Impact();
+			}
+
+			function showDivLiuzhou_Impact(){
+				$("#liuzhou_impact").css("display","block");
+				$("#tab_liuzhou_impact").css("background","#CFCFCF");
+				$("#tab_liuzhou_back").css("background","none");
+				$("#liuzhou_back").css("display","none");
+			}
+
+			function showDivLiuzhou_Back(){
+				$("#liuzhou_back").css("display","block");
+				$("#tab_liuzhou_back").css("background","#CFCFCF");
+				$("#tab_liuzhou_impact").css("background","none");
+				$("#liuzhou_impact").css("display","none");
+			}
+		</script>			   
+</head>
+<body>
+	<div style="position:relative">
+		<div class="header">
+			<div class="container">
+				<div class="logo">
+					<h3 class="m_2"><b>Urban Transformation</b></h3>
+				</div>
+				<nav class="top-nav">
+					<ul class="top-nav">
+						<li class="active"><a href="#home" class="scroll">Home <span> </span></a></li>
+						<li class="page-scroll"><a onclick="showDivSydney();href='#introduction'" class="scroll">Sydney<span> </span></a></li>
+						<li class="page-scroll"><a onclick="showDivLiuzhou();href='#introduction'" class="scroll">liuzhou<span> </span></a></li>
+						<li class="page-scroll"><a href="#summary" class="scroll">Summary<span> </span></a></li>
+						<li class="page-scroll"><a href="#reference" class="scroll">References<span> </span></a></li>						
+					</ul>
+					<!-- <a href="#" id="pull"><img src="images/nav-icon.png" title="menu" /></a> -->
+			</nav>			
+			</div>
+		</div>
+	
+  
+	<!-- part1: slider   -->
+		<div class="main" id="home" style="padding-top: 30px">
+				<div class="slider_container">
+					<div class="wmuSlider example1">
+							<!--<div class="wmuSliderWrapper">
+								<!-- <article style="position: absolute; width: 100%; opacity: 0;"> 
+									<div class="sliderarticle1">
+									</div>
+								</article 
+								<article style="position: relative; width: 100%; opacity: 1;"> 
+									<div class="sliderarticle2">
+									</div>
+							</div>-->
+							<ul class="wmuSliderPagination">
+							<!-- 	<li><a href="#" class="">0</a></li>
+								<li><a href="#" class="">1</a></li> -->
+							</ul>
+							</div>
+							<script src="js/jquery.wmuSlider.js"></script> 
+									<script>
+											$('.example1').wmuSlider();         
+										</script> 	           	      
+					</div> -->
+
+		</div>
+	<!-- part1: Definition   -->					
+		<div class="row feature">
+			<div class="col-md-8 feature_top">
+				<h3>Code Assigment1</h3>
+				<p> Urban transformation can refer to planning theory changes in each period and the approach to urban. Especially the improvement and replacement of buildings in a city, each of urban transformation plan has advantages and drawbacks.</p>
+			</div>
+		</div>
+
+		
+		<!-- part2: city overview  -->
+		<div class="main" id="introduction">
+			<div class="content-top">		
+				<div class="container" >		
+					<div  style="display: block; width: 100%; margin: 0px;">
+						<ul>
+							<li class="resp-tab-item" id="tab_sydney" onclick=showDivSydney()>Sydney</li>
+							<li class="resp-tab-item" id="tab_liuzhou" onclick=showDivLiuzhou()>liuzhou</li>
+						</ul>	
+					</div>
+					<div class="border" ></div>
+
+					<div class="col-md-8 feature_top" id="sydney">
+							<div class="container">
+									<div style="text-align: left">
+										<h3 class="m_7"><b>Green Square - Sydney</b></h3>
+									</div>
+
+									<div>
+										<iframe width="100%" height="500" src="./images/01.mp4" frameborder="0" allowfullscreen></iframe>
+									</div>	
+									
+									
+									<div class="row">
+											<h3 class="m_7">Concept</h3>			
+											<p class="m_6">For Urban Transformation, its significance is to transform the previously heavily polluted industrial areas into green, environmentally friendly and sustainable new cities in line with the law of social development. The Australian government has launched a plan to rebuild the old city, and Green Square has become the first target.
+
+											</p>
+									</div>
+
+									<div class="row">
+										<div class="left_div"> 
+												<img src="6.-LFA-GSTC-Final-Illustrative-Masterplan.jpg" alt="" width="100%" height="400px">
+										</div>
+
+										<div class="right_div">
+												<img src="sydney3.jpg" alt="" width="100%" height="400px" >
+										</div>
+									</div>
+
+									<div class="row">			
+													<p class="m_6">	
+														For 100 years from 1850 to 1960, the Green Square project was located in a wool-based factory area that was once a huge dump from 1970 to 1996. Designer Stewart Hollenstein built a new area in Sydney with a green square area of 278 hectares. The area is including five urban areas: Beaconsfield, Zetland, Rosebery, Alexandria and Waterloo. It is only 3.5 kilometers away from Sydney CBD and 4 kilometers from Sydney Kingsford Airport. There are 30500 new residential units, of which about ten thousand are under evaluation or construction. By 2030, when all the shrubs are built, the total population of Green Square will probably reach 61,000, depending on the expected trend in the real estate market, as well as economic and other factors. 21000 of the formal jobs are available, mostly from the center of new towns. Green square was planned as one of the first "low-carbon zones" in Sydney. The region's new development projects are powered by a green energy system called tri-generation. This system applies recycled water to non-drinkable areas and automatically eliminates waste. The system uses natural gas as the main energy and provides power, heat and air conditioning for the surrounding buildings. The energy efficiency of the system is twice that of the coal-fired power generation system, and the greenhouse gas emissions are reduced by more than 60%. In the whole green square project, the community center has become the core of sustainable development.
+													</p>
+									</div>
+										
+									<div class="row">
+											<div class="left_div">										
+												<img src="Construction-Green-Square-inline.jpg" alt="" width="100%" height="400px">	
+											</div>
+
+											<div class="right_div">
+													<img src="149bbb00b06168ceae4580222d540676.jpg" alt=""/width="100%" height="400px" >
+											</div>
+
+											
+									</div>
+		
+
+									<div class="row">
+												<p class="m_6">Many people in other areas have expressed support for the Green Square project and want to move to the Green Square area. But for the older residents of the Green Square project area, the recent residential experience is extremely poor. For example, Mark Woodbridge, a resident of Zatland for five years, began complaining about the increase in residents and cars, and traffic jams were the biggest daily problem. However, some people said that Green Square project as the Australian government's attempt to urban transformation, there will certainly be some problems, but with the expansion of the renovation area and the improvement of the urban transformation plan, these problems will be solved.
+												</p>
+									</div>
+
+									<div class="row">
+										<div class="left_div">										
+											<img src="./images/s_0.jpg" alt="" width="100%" height="400px">	
+										</div>
+
+										<div class="right_div">
+												<img src="./images/s_1.jpg" alt=""/width="100%" height="400px" >
+										</div>
+									</div>
+
+										<div class="row">			
+											<p class="m_6">	
+										I think the Green Square project started as a sign of urban progress, which also proves that urban transformation is essential for today's cities, transforming old urban or industrial areas into sustainable new urban systems that enhance people's quality of life while protecting the environment and ecological equilibrium. Making residents' life and travel easier. As new cities become more and more recognized, I think more and more cities and regions will support Urban Transformation.
+											</p>
+								
+								</div>
+										
+									<div class="row"  >
+											<div class="left_div">
+													<h3 class="m_7">Pros</h3>																		
+													<img src="GREENSQUARE.jpg" alt=""/width="100%">
+												</div>
+												<div class="right_div">
+													<h3 class="m_7">Cons</h3>					
+													<img src="11111.jpg" alt=""/width="100%">									
+												</div>
+									</div>
+                                    <div>
+										<p></p>
+										<div style="float:right" >
+												<a  onclick="showDivSydney();href='#introduction'">Learn Sydney
+												     <img src="images/right_arrow.png" alt="">
+											    </a>
+										</div>
+								    </div>
+							</div>	
+					</div>
+					
+					<div class="col-md-8 feature_top"  id="liuzhou">
+							<div class="container">
+								<div style="text-align: left">
+									 <h3 class="m_7">Station - liuzhou</h3>
+								</div>
+						
+								<div>
+											<iframe width="100%" height="600" src="./images/00.mp4" frameborder="0" allowfullscreen></iframe>
+								</div>	
+		
+
+								<div class="row">
+										<h3 class="m_7">Concept</h3>			
+										<p class="m_6">Urban transformation is a new term. With the development of science and technology, urban transformation has been paid more and more attention by architects. Urban transformation is a concept of transforming resource-based cities into sustainable cities, which in a sense refers to the progress of a city type. Now I'm going to tell you about a new design concept, a new city created by urban designer Stefano Boeri himself, and a very typical case of urban transformation - Liuzhou Forest City.
+										</p>
+								</div>
+								<div class="row">
+									<div class="left_div">										
+										<img src="./images/l_0.jpg" alt="" width="100%" height="400px">	
+									</div>
+		
+									<div class="right_div">
+											<img src="./images/l_1.jpg" alt=""/width="100%" height="400px" >
+									</div>
+								</div>
+
+								<div class="row">			
+									<p class="m_6">	Liuzhou, China, is a city famous for its industry. As we all know, the development of Chinese cities is rapid, and the cities built in China are also seriously polluting the environment. The Chinese government is aware that Liuzhou, as a large industrial city, needs to be transformed into a sustainable city. Designer Stefano Boeri started a new urban design for Liuzhou. He built a small city in the mountains of Liuzhou suburbs. Liuzhou Forest City is located in the north of Guiliu Road in Liudong New District, close to the Lotus Hill scenic area, covering an area of about 175 acres along the Liujiang River. After the completion of the forest city, the Liuzhou New Area, which can accommodate more than 30,000 people on average, absorbs more than 10,000 tons of carbon dioxide and 57 tons of dust each year, and produces about 900 tons of oxygen at the same time. Liuzhou Forest City will be self-sufficient in a variety of functions, such as water recycling and waste water collection systems, rooftop solar panels for renewable energy. Stefano Boeri called this project Vertical ForestING. Vertical ForestING is a new generation of urban high-rise buildings covered entirely with leaves of trees and plants. It is an architectural design that promotes the coexistence of architecture and nature. It is also an invention that adapts to complex urban ecosystems. For buildings covered with plants, it reduces the reflection of the mirror to the building and thus reduces the heat island effect. Vertical ForestING forms another urban environment where people can live close to trees, shrubs, and plants in the city; this situation is usually found only in suburban houses with gardens, but the agricultural land needed for this development model is now considered an energy consumption that is expensive and far from compact. Public services in a city.
+							</p>
+						
+						</div>
+		
+												
+							    <div class="row">
+										<div class="left_div"> 
+												<img src="./images/00.jpg" alt="" width="100%" height="400px">
+										</div>
+	
+										<div class="right_div">
+												<img src="./images/01.jpg" alt="" width="100%" height="400px" >
+										</div>
+								</div>
+									  	 
+								<div class="row">
+										<div class="left_div"> 
+												<p class="m_6">Most residents feel that this urban model is what they expect. It has realized a new scientific city mode with low consumption, low emission, high efficiency, harmony and order. Of course, a small number of economists feel that there are some problems in the urban transformation of Liuzhou, first of all, the maintenance of climate and plants, in some dry and cold areas is not conducive to the survival of plants, and rainstorm weather is likely to cause rain-soaked floor problems. Secondly, the problem of construction costs, from the initial construction to the late plant pruning, requires a lot of money to maintain. Finally, the problem of housing area, plants will occupy a large number of housing area, especially in China with a large population, urban housing area has been valued by people.
+												</p>
+										</div>
+	
+										<div class="right_div">
+												<img src="./images/02.jpg" alt="" width="100%" height="400px" >
+										</div>
+								</div>
+													
+								<div class="row">
+										<div class="left_div">
+												<img src="./images/03.jpg" alt="" width="100%" height="400px" >
+										</div>
+
+										<div class="right_div"> 
+												<p class="m_6">Architecture should not be simply the house we live in. It should be a combination of aesthetics and livability, not an ostentation. Although the vertical forest cannot replace other types of residential products, a wide range of promotion, but the vegetation moved into the air, around the room, the experience of living space will be a qualitative improvement.
+												</p>
+										</div>	
+								</div>
+				
+
+								<div class="row"  >
+										<div class="left_div">
+												<h3 class="m_7">Pros</h3>																		
+												<img src="to2.jpg" alt=""/width="100%">
+											</div>
+											<div class="right_div">
+												<h3 class="m_7">Cons</h3>					
+			                                    <img src="to312321.jpg" alt=""/width="100%">									
+											</div>
+								</div>				
+								
+								<div>
+										<p></p>
+										<div style="float:right" >
+												<a  onclick="showDivLiuzhou();href='#introduction'">Learn LiuZhou
+												     <img src="images/right_arrow.png" alt="">
+											    </a>
+										</div>
+								</div>
+									
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- part3: summary  -->
+		<div class="border"></div>
+		<div class="main" id="summary">
+
+				<div class="container">
+					
+					<div class="row feature">
+						<div class="col-md-8 feature_top">
+							<h3>Summary</h3>
+							<p>In conclusion, Green Square Station in Sydney, Australia and liuzhou Station in China are two different Urban Transform Planning, it may be the reason of different cultural background. In this way, the Keyword of Green Square can be concluded neighbour-hoods community and new transportation system. The liuzhou Station tend to like a commercial district and underground centre. It cannot be denied that there both are successful Urban Transformation, although it still existing shortcoming.</p>
+						</div>
+					</div>
+				</div>
+		</div>
+
+		<!-- part4: reference  -->
+		<div class="border" id="reference"></div>
+		<div class="main">
+				<div class="container">
+					
+					<div class="row feature">
+						<div class="col-md-8 feature_top">
+							<h3>References</h3>
+							<p>http://news.yuanlin.com/detail/2017210/249904.htm<br>
+								http://www.cnki.com.cn/Article/CJFDTotal-JZXB201609021.htm<br>
+								http://madan.org.il/en/news/futuristic-green-city-china<br>
+								https://www.createdigital.org.au/china-city-home-trees-people/ <br>
+								https://www.sohu.com/a/130995056_120015 <br>
+								</p>
+						</div>
+					</div>
+				</div>
+		</div>
+		
+		<!-- part5: footer  -->
+		<div class="main">
+			<div class="container">
+				<div class="footer_bottom">
+					<div class="social">	
+					<ul>	
+						<li class="s1"><a href="#"><span> </span></a></li>
+						<li class="s2"><a href="#"><span> </span></a></li>
+						<li class="s3"><a href="#"><span> </span></a></li>
+						<li class="s4"><a href="#"><span> </span></a></li>
+						<li class="s5"><a href="#"><span> </span></a></li>
+						<li class="s6"><a href="#"><span> </span></a></li>
+						<li class="s7"><a href="#"><span> </span></a></li>
+						<li class="s8"><a href="#"><span> </span></a></li>
+						<li class="s9"><a href="#"><span> </span></a></li>
+					</ul>
+					</div>
+				<div class="clearfix"> </div>
+				</div>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						/*
+						var defaults = {
+							containerID: 'toTop', // fading element id
+							containerHoverID: 'toTopHover', // fading element hover id
+							scrollSpeed: 1200,
+							easingType: 'linear' 
+						};
+						*/
+						
+						$().UItoTop({ easingType: 'easeOutQuart' });
+						
+					});
+				</script>
+				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;">top </span></a>
+			</div>
+		</div>
+    </div>
+</body>
+</html>
