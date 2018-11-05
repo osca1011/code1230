@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
+    <!-- <script type="fill-extrusion" src='./NAMEOFFILE.geojson'></script> -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<title>home</title>
+</head>
+<body>
+	<div class="title">
+		<h1>The new apartment</h1>
+	</div>
+	<div class="three">
+		<div class="left">
+			<div class="texts">The problem I raised in the previous assessment was the difference between the house and the apartment in NSW. In this assessment, I did a lot of research and myself to observe that there are many places in Sydney's West and North Districts that are particularly densely populated, but they are mainly houses. From the point of view of the use of the building space, there is no doubt that the apartment can live more people than the house. As the height of the building increases, he can accommodate more people.</div>
+			<div class="texts">The area I chose was in the Epping or Eastwood area in the northwest of Sydney. When I was on the field, I found that most of the locals lived in the house, but from a demographic perspective I found out in 2015. In the demographic project of Greater Sydney, the total population of this area is 183,399, while the total population of Sydney is 5,131,326, which means that 3.5% of the population is concentrated in these areas. From the perspective of the occupants, everyone wants to have more public facilities such as parks, markets, large supermarket chains, shopping malls, hospitals and schools. But these facilities need a place to build, and most of the houses in these areas are dominated. In Greater</div>
+		</div>
+		<div class="right">
+			<div class="imgs">
+				<img class="img" src="img/one.jpg">
+			</div>
+		</div>
+	</div>
+	<div class="three">
+		<div class="left">
+			<div class="imgs_left">
+				<img class="img" src="img/two.jpg">
+			</div>
+			<div class="imgs_left">
+				<div id='map'></div>
+			</div>
+		</div>
+		<div class="right_text">
+			<div class="texts_one"> Sydney, the per capita possession of the house land is 2.6 square meters, and if the area is 2.6, the area per capita will be Greatly improved, the comfort of living with the improvement of the area is greatly improved, which is the main purpose of my design.
+Design concept: In the current social background, the traditional house mode can no longer meet the development of the city. Under the limited land plot, more people want to have a house. Only the house is arranged vertically, in the form of an apartment, the house will be Put it together. In this design, I hope that this building is traditional, and I hope that people can experience the feeling of a single traditional house in the high-rise buildings. I also hope that it is modern, the building is also urban design, cannot be contrary to the surrounding buildings or urban attributes, so he must be a modern building. Therefore, in the standard house type, the upper and lower parts are combined, and the village is vertically arranged. In the scattered space, some balconies are formed in the re-combination, so that people can walk out of the building, reach the balcony, and enjoy the beauty of the city to meet the traditional house. form. In the façade, I wrapped the simple architectural form with beautiful curved lines to make it more modern, like a beautiful woman standing on a city street.
+</div>
+		</div>
+	</div>
+
+	<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiamstbGluIiwiYSI6ImNqbHFubWp0NDB2OTEza29ldGNxOWx5NzIifQ.m_4BN0Gn4zFIxpdlJgQ7-Q';
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/mapbox/light-v9', // stylesheet location
+    center: [9.30254364013672E-05,0.000171219520568848], // starting position [lng, lat]
+    zoom: 18, // starting zoom
+    pitch:45,
+    bearing:-17.6,
+});
+map.on('load', function() {
+
+   map.addLayer({
+       "id": "data",
+       "type": "fill-extrusion",
+       "source": {
+           'type': 'geojson',
+           'data': 'https://jackie-lin.github.io/test/0768.geojson'
+       },
+       'layout': {
+           'visibility': 'visible'
+           },
+       'paint': {
+               'fill-extrusion-color' : {
+                   'property': 'colour',
+                   'type': 'identity'
+               },
+               'fill-extrusion-height' : {
+                   'type': 'identity',
+                   'property': 'height'
+               },
+               'fill-extrusion-base' : {
+                   'type': 'identity',
+                   'property': 'base_height'
+               },
+                'fill-extrusion-opacity': 1
+           }
+
+   });
+});
+</script>
+</body>
+</html>

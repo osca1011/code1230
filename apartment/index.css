@@ -1,0 +1,106 @@
+body,div,dl,dt,dd,ul,ol,li,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
+    body { background:#fff; color:#555; font-size:14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+    td,th,caption { font-size:14px; }
+    address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+    a { color:#555; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    img { border:none; }
+    ol,ul,li { list-style:none; }
+    input, textarea, select, button { font:14px Verdana,Helvetica,Arial,sans-serif; }
+    table { border-collapse:collapse; }
+    html {overflow-y: scroll;}
+
+
+.title{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 90vw;
+	height: 10vw;
+	border-radius: 6px;
+	box-shadow: 0 4px 2px -2px rgba(0,0,0,0.2);
+	margin: 2vw auto;
+}
+
+.three{
+	width: 90vw;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin: 2vw auto;
+}
+
+.left{
+	width: 50vw;
+	height: 100%;
+	display:flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.texts{
+	width: 40vw;
+	font-size: 1vw;
+	text-align: left;
+	line-height: 1.9vw;
+	margin: 1.5vw auto;
+}
+
+.texts_one{
+	width: 40vw;
+	font-size: 1vw;
+	text-align: left;
+	line-height: 2.4vw;
+	margin: 1.5vw auto;
+}
+
+.right{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 40vw;
+}
+
+.left{
+	width: 50vw;
+	width: 50vw;
+	height: 100%;
+	display:flex;
+	justify-content: center;
+}
+
+.imgs{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 35vw;
+	height: 35vw;
+	margin: 5vw auto;
+	box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+}
+
+.img{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 95%;
+	height: 95%;
+}
+
+#map{
+	width: 30vw;
+	height: 20vw;
+	margin: auto;
+}
+
+.right_text{
+	display: flex;
+	justify-content: center;
+	width: 40vw;
+}
+
+.imgs_left{
+	width: 30vw;
+	margin: 2vw auto;
+	box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+}
