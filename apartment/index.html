@@ -44,7 +44,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiamstbGluIiwiYSI6ImNqbHFubWp0NDB2OTEza29ldGNxO
 var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/mapbox/light-v9', // stylesheet location
-    center: [9.30254364013672E-05,0.000171219520568848], // starting position [lng, lat]
+    center: [151.08466,-33.7900175], // starting position [lng, lat]
     zoom: 18, // starting zoom
     pitch:45,
     bearing:-17.6,
@@ -56,7 +56,7 @@ map.on('load', function() {
        "type": "fill-extrusion",
        "source": {
            'type': 'geojson',
-           'data': 'https://jackie-lin.github.io/test/0768.geojson'
+           'data': 'https://jackie-lin.github.io/test/eastwood.geojson'
        },
        'layout': {
            'visibility': 'visible'
